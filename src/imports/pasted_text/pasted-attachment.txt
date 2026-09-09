@@ -1,0 +1,932 @@
+Design a polished web-based educational coding game called **Codepoly**.
+
+Codepoly is a learning product for complete beginners and introductory computer science students. It combines a colorful board-game experience inspired by the energy and accessibility of Mario Party and Monopoly with coding exercises, debugging challenges, multiple-choice questions, output prediction, logic questions, and short programming tasks.
+
+The product should feel like a **real game first**, while still being clean enough for universities and professors to use in classrooms.
+
+## PRIMARY DESIGN GOAL
+
+Create the **main gameplay screen** for Codepoly.
+
+The entire board must be visible without requiring scrolling.
+
+The board should surround a central gameplay area.
+
+The page should feel polished, intentional, playful, and premium.
+
+Do NOT make this look like:
+
+* a generic SaaS dashboard
+* an AI-generated landing page
+* a crypto product
+* a children's learning app
+* a copy of Monopoly
+* a copy of LeetCode
+* an overly futuristic gaming interface
+
+Avoid excessive gradients, glassmorphism, glowing borders, random floating cards, excessive shadows, excessive rounded rectangles, unnecessary badges, giant empty spaces, or decorative elements without purpose.
+
+Every element must have a clear functional reason to exist.
+
+The UI must have strong visual hierarchy and consistent spacing.
+
+---
+
+# CANVAS
+
+Design for desktop web first.
+
+Primary frame:
+**1440 × 900**
+
+The entire game experience should fit inside this viewport.
+
+No page scrolling during gameplay.
+
+Use responsive principles so the board could later adapt to smaller laptop sizes.
+
+---
+
+# GENERAL VISUAL DIRECTION
+
+Style:
+**Mario Party energy + modern educational product + premium coding interface**
+
+The board can be colorful and expressive.
+
+The center coding interface should become calmer and cleaner so users can concentrate.
+
+Use a light interface overall.
+
+Background:
+soft warm off-white or very light neutral.
+
+Do not use pure white everywhere.
+
+Use subtle texture or very soft background shapes only if needed.
+
+Typography:
+Use a modern, friendly sans-serif.
+
+Suggested direction:
+Inter, Geist, Manrope, or similar.
+
+Headings should feel friendly but not childish.
+
+Code must use a proper monospaced font.
+
+---
+
+# COLOR SYSTEM
+
+Create a controlled palette.
+
+Primary brand:
+rich violet / purple.
+
+Accent colors for board tiles:
+
+* green = coding
+* blue = quiz
+* yellow = logic
+* orange = debugging
+* purple = mystery
+* red = battle
+* gold = boss/reward
+
+Use muted, sophisticated versions of these colors.
+
+Avoid highly saturated neon colors.
+
+Each tile type should be identifiable through:
+
+1. color
+2. icon
+3. label
+
+Do not rely only on color.
+
+---
+
+# PAGE STRUCTURE
+
+The screen should contain three main layers:
+
+1. Top game header
+2. Main board with center challenge area
+3. Compact player HUD / status information
+
+Everything should fit naturally within the 1440 × 900 frame.
+
+---
+
+# TOP HEADER
+
+Create a compact game header approximately 64–72px high.
+
+LEFT:
+Codepoly logo.
+
+Logo direction:
+simple wordmark with a subtle coding/game element.
+
+Do NOT create an overly complicated logo.
+
+CENTER:
+Game information.
+
+Example:
+
+"Python Fundamentals"
+
+Below or beside it:
+
+Round 4 / 12
+
+Keep this subtle.
+
+RIGHT:
+small utility controls:
+
+* sound
+* help
+* settings
+* leave game
+
+Do not place huge buttons here.
+
+Player's avatar can also appear on the right.
+
+---
+
+# MAIN GAME BOARD
+
+The board is the dominant visual element.
+
+It should occupy approximately:
+1100–1200px width
+and
+680–720px height
+
+Center it horizontally.
+
+The board should form a continuous rectangular or softly irregular loop around the central challenge area.
+
+Think of a modern board game rather than a spreadsheet grid.
+
+The board should contain approximately 28–32 spaces.
+
+All spaces must remain visible.
+
+Do NOT make tiny unreadable tiles.
+
+Corners may contain larger special spaces.
+
+The board should feel connected like a real physical board.
+
+---
+
+# BOARD TILE DESIGN
+
+Create several clearly differentiated tile types.
+
+## 1. Coding Tile
+
+Color:
+green family.
+
+Icon:
+</> or terminal icon.
+
+Short label:
+CODE
+
+Purpose:
+student writes code.
+
+---
+
+## 2. Quiz Tile
+
+Color:
+blue.
+
+Icon:
+question mark.
+
+Label:
+QUIZ
+
+Purpose:
+multiple-choice or concept question.
+
+---
+
+## 3. Debug Tile
+
+Color:
+orange.
+
+Icon:
+bug.
+
+Label:
+DEBUG
+
+Purpose:
+find and fix broken code.
+
+---
+
+## 4. Logic Tile
+
+Color:
+yellow.
+
+Icon:
+puzzle or brain.
+
+Label:
+LOGIC
+
+Purpose:
+code tracing, arranging steps, predicting behavior.
+
+---
+
+## 5. Mystery Tile
+
+Color:
+purple.
+
+Icon:
+gift box or question card.
+
+Label:
+MYSTERY
+
+Purpose:
+random game event or reward.
+
+---
+
+## 6. Battle Tile
+
+Color:
+red.
+
+Icon:
+crossed lightning bolts / VS.
+
+Label:
+BATTLE
+
+Purpose:
+players compete on the same question.
+
+---
+
+## 7. Boss Tile
+
+Make this one noticeably larger or more important.
+
+Color:
+gold.
+
+Icon:
+crown.
+
+Label:
+BOSS
+
+Purpose:
+end-of-world challenge.
+
+---
+
+# BOARD WORLD THEME
+
+This board represents:
+
+**Python Village — World 1**
+
+Topic coverage:
+
+* variables
+* data types
+* print
+* input
+* arithmetic
+* basic conditionals
+
+Use extremely subtle environmental details around the board.
+
+Examples:
+tiny trees,
+coding signs,
+small bridges,
+little houses,
+terminal-shaped buildings,
+pixel-inspired decorations.
+
+These should make the board feel alive without overwhelming the UI.
+
+Do NOT turn the page into a cartoon illustration.
+
+The game UI must remain dominant.
+
+---
+
+# PLAYER PIECES
+
+Show four players on different board spaces.
+
+Each player has a small friendly character/avatar.
+
+Example players:
+
+Atshal
+Maya
+Leo
+Sam
+
+Player pieces should be immediately recognizable on the board.
+
+Each player gets a small colored ring beneath their avatar.
+
+The active player should have a subtle highlight.
+
+Do not use giant floating name tags.
+
+---
+
+# CENTER GAMEPLAY AREA
+
+The center of the board is the most important functional area.
+
+Create one large central panel.
+
+This panel must feel visually calmer than the board.
+
+Dimensions approximately:
+700–760px wide
+420–480px tall
+
+Use a neutral surface.
+
+Very light shadow or border.
+
+Rounded corners around 16–20px.
+
+Not excessive.
+
+---
+
+# CURRENT CHALLENGE HEADER
+
+Top-left:
+
+small category indicator:
+
+DEBUG CHALLENGE
+
+Then:
+
+Question title:
+
+"Fix the greeting function"
+
+Underneath:
+
+"Find the bug and make all test cases pass."
+
+Difficulty:
+Beginner
+
+Reward:
++120 XP
+
+Do not overcrowd this area.
+
+---
+
+# CODE EDITOR
+
+The main part of the central panel should contain a real-looking code editor.
+
+Dark editor background is acceptable here even though the rest of the app is light.
+
+Example code:
+
+def greet(name)
+print("Hello " + name)
+
+Use:
+
+* line numbers
+* subtle syntax highlighting
+* proper spacing
+* realistic code-editor treatment
+
+Do not imitate VS Code exactly.
+
+Make it feel like a simplified educational editor.
+
+---
+
+# CODE EDITOR TOOLBAR
+
+Above the editor:
+
+Language:
+Python
+
+Optional small controls:
+
+Reset
+Format
+
+Keep them subtle.
+
+Do NOT add unnecessary toolbar icons.
+
+---
+
+# TEST CASES
+
+Below or beside the code editor, show:
+
+Tests
+
+✓ Test 1
+✓ Test 2
+× Test 3
+
+Display:
+
+2 / 3 passing
+
+Use clear success/failure states.
+
+Do not make giant error banners.
+
+---
+
+# PRIMARY ACTIONS
+
+Bottom-right of central panel:
+
+secondary button:
+Run Code
+
+primary button:
+Submit
+
+Primary CTA should use the main purple brand color.
+
+Button hierarchy must be obvious.
+
+No more than two primary actions.
+
+---
+
+# HINT
+
+Bottom-left:
+
+small button:
+
+💡 Use Hint
+
+Beside it:
+
+2 remaining
+
+Hints should feel like a game resource.
+
+---
+
+# PLAYER HUD
+
+Below the board, create a compact player status bar.
+
+Do not create four giant cards.
+
+Use one horizontal component.
+
+For the active player show:
+
+Avatar
+Atshal
+Level 4
+
+XP:
+420 / 600
+
+Hearts:
+♥ ♥ ♥
+
+Power-ups:
+
+Hint ×2
+Shield ×1
+Extra Test ×1
+
+Make this very compact and readable.
+
+---
+
+# OTHER PLAYERS
+
+On the opposite side of the HUD or integrated subtly, show:
+
+Maya — 390 XP
+Leo — 350 XP
+Sam — 280 XP
+
+Represent them using small avatars and minimal information.
+
+Do not clutter the bottom of the screen.
+
+---
+
+# DICE / TURN CONTROL
+
+Place a clear game control near the board.
+
+Example:
+
+"Your turn"
+
+Large but tasteful dice button:
+
+🎲 Roll Dice
+
+Below:
+
+"Roll to move"
+
+Do not use an enormous cartoon button.
+
+The user should immediately know what action to take next.
+
+---
+
+# PATH CHOICE STATE
+
+Some board spaces should split into two routes.
+
+Visually show one example route split:
+
+LEFT PATH:
+Easy challenge
++50 XP
+
+RIGHT PATH:
+Hard challenge
++150 XP
+
+This demonstrates that players sometimes choose strategy rather than moving automatically.
+
+Do not make every space linear.
+
+---
+
+# GAME ECONOMY
+
+Do NOT use money.
+
+Main progression resources:
+
+XP
+Hearts
+Power-ups
+
+Optional:
+
+Stars
+
+Avoid creating too many currencies.
+
+---
+
+# POWER-UPS
+
+Design small visual icons for:
+
+Hint
+Debugger
+Extra Test
+Shield
+Double Dice
+Skip
+
+They should share one consistent icon style.
+
+Do not make them overly detailed.
+
+---
+
+# QUESTION TYPES
+
+The product supports:
+
+Coding
+Multiple choice
+Debugging
+Output prediction
+Logic
+Drag-and-drop ordering
+
+The main screen should currently show a Debug challenge, but create the component system so the center panel could support all these challenge types.
+
+---
+
+# MICRO-INTERACTIONS TO ACCOUNT FOR
+
+Design states for:
+
+Player landing on a tile.
+
+Tile becoming selected.
+
+Correct answer.
+
+Incorrect answer.
+
+XP earned.
+
+Dice roll.
+
+Player moving.
+
+Power-up received.
+
+Boss tile reached.
+
+Do not create full animation timelines.
+
+Just ensure the interface has clear visual states.
+
+---
+
+# CORRECT ANSWER STATE
+
+Create a component/state showing:
+
+✓ Correct!
+
++120 XP
+
+3 / 3 tests passed
+
+Continue
+
+Use positive reinforcement.
+
+Confetti can exist but should be subtle.
+
+---
+
+# INCORRECT ANSWER STATE
+
+Create a component/state showing:
+
+"Not quite yet"
+
+2 / 3 tests passing
+
+Then show the specific failed test.
+
+Offer:
+
+Try Again
+
+Use Hint
+
+Do NOT aggressively punish the student.
+
+No giant red screen.
+
+---
+
+# DESIGN SYSTEM
+
+Create reusable components for:
+
+Board tile
+Player token
+Avatar
+Button
+Icon button
+Badge
+XP indicator
+Heart indicator
+Power-up chip
+Code editor
+Test case
+Challenge header
+Dice control
+Question option
+Modal
+Tooltip
+
+Use Auto Layout everywhere possible.
+
+Use consistent spacing.
+
+Suggested spacing scale:
+
+4
+8
+12
+16
+24
+32
+48
+
+Use a consistent radius system.
+
+Small:
+8px
+
+Medium:
+12px
+
+Large:
+16–20px
+
+Avoid randomly changing radius values.
+
+---
+
+# ICONOGRAPHY
+
+Use one consistent icon library/style.
+
+Prefer simple rounded line icons.
+
+Do not mix:
+emoji,
+3D icons,
+outline icons,
+filled icons,
+and illustration icons randomly.
+
+Game character artwork can be more expressive.
+
+Functional UI icons must remain consistent.
+
+---
+
+# ACCESSIBILITY
+
+Maintain strong contrast.
+
+Minimum body text size:
+14px.
+
+Primary UI text:
+16px.
+
+All interactive elements should have clear hover, active, focus, and disabled states.
+
+Do not communicate tile types through color alone.
+
+Code editor must be readable.
+
+---
+
+# RESPONSIVE THINKING
+
+Desktop is the main design.
+
+Do not design mobile screens right now.
+
+However, structure components so the experience could eventually adapt to tablets.
+
+Avoid elements that depend on extremely precise absolute positioning.
+
+---
+
+# PROFESSIONAL QUALITY REQUIREMENTS
+
+The final result should look like something a funded education startup could ship.
+
+It must feel deliberately designed.
+
+Pay particular attention to:
+
+alignment
+spacing
+visual rhythm
+content density
+button hierarchy
+consistent iconography
+consistent radii
+consistent borders
+typography
+player readability
+board readability
+challenge readability
+
+Before considering the design complete, inspect the entire screen and remove anything that looks decorative without purpose.
+
+---
+
+# STRICT DO-NOT-DO LIST
+
+Do NOT:
+
+create a sidebar
+
+create a traditional dashboard
+
+use giant gradient backgrounds
+
+cover everything with glassmorphism
+
+create floating random cards
+
+use excessive shadows
+
+use excessive pills
+
+put every piece of information inside a card
+
+use tiny text
+
+use giant typography
+
+create fake graphs
+
+use meaningless stats
+
+add AI assistant features
+
+add chatbots
+
+add "AI powered" labels
+
+use stock illustrations
+
+use generic corporate avatars
+
+make the board tiny
+
+make the coding editor tiny
+
+hide part of the board
+
+require scrolling to see the full game
+
+copy Monopoly branding
+
+copy Mario characters
+
+copy Duolingo characters
+
+copy LeetCode styling
+
+make the experience look like a children's toy
+
+make the interface overly serious or enterprise-like
+
+---
+
+# FINAL COMPOSITION PRIORITY
+
+When someone sees the screen, their eyes should naturally move in this order:
+
+1. Game board
+2. Current challenge
+3. Their player position
+4. What they need to do next
+5. Reward / progress
+6. Other players
+
+The interface should answer these questions instantly:
+
+Where am I?
+
+What challenge am I doing?
+
+What do I need to do?
+
+What happens if I succeed?
+
+Whose turn is it?
+
+How am I performing?
+
+---
+
+Produce the primary desktop gameplay design with a complete polished board, center coding challenge, four players, player HUD, board tile system, dice interaction, XP system, hearts, and power-ups.
+
+Make the design clean, fun, highly usable, cohesive, and production-quality.
+
+Prioritize restraint and consistency over adding more components.
+
+The final result should feel like:
+
+**"A genuinely great board game designed specifically to teach programming."**

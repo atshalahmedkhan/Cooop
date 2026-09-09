@@ -1,0 +1,10 @@
+{
+  "description": "Guides users through step-by-step instructions to complete tasks efficiently, enhancing productivity and ensuring clear progress tracking.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
